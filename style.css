@@ -1,0 +1,191 @@
+/* Reset básico */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Paleta de cores */
+:root {
+	--bg-color: #1B1F3B;       /* Fundo geral */
+	--text-color: #E4E4E4;     /* Cor clara para texto */
+	--accent-color: #00E5FF;   /* Cor de destaque */
+	--header-bg: #14182F;      /* Fundo do cabeçalho */
+	--footer-bg: #2C2F40;      /* Fundo do rodapé */
+	--border-color: #0099AA;   /* Borda/link escuro */
+}
+
+/* Layout geral */
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: 'Segoe UI', sans-serif;
+	padding: 20px;
+}
+
+/* Página central */
+.page-wrapper {
+	width: 80%;
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative; /* 1. Define .page-wrapper como referência para posicionamento. */
+}
+
+/* Seção de introdução */
+.intro {
+	height: 550px;
+}
+
+/* Oculta o design-archives */
+#design-archives {
+	display: none;
+}
+
+/* Títulos */
+h1 {
+	color: var(--accent-color);
+	font-size: 1.8rem;
+	text-align: right;
+	padding-left: 1em;
+}
+
+h2 {
+	color: var(--accent-color);
+	font-size: 1.4rem;
+	text-align: right;
+}
+
+h3 {
+	color: var(--accent-color);
+	font-size: 1.2rem;
+	text-align: right;
+}
+
+/* Parágrafos */
+p {
+	margin-bottom: 15px;
+	text-indent: 1em;
+}
+
+/* Textos da seção principal com espaçamento */
+.main.supporting p {
+	line-height: 1.5;
+}
+
+/* Links */
+a {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00b8cc;
+	text-decoration: underline;
+}
+
+/* Abreviações */
+abbr {
+	font-variant: small-caps;
+}
+
+/* Cabeçalho */
+header {
+	background-color: var(--header-bg);
+	color: var(--text-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+/* Container genérico */
+.container {
+	background-color: #222;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+/* Botões */
+button {
+	background-color: var(--accent-color);
+	color: var(--bg-color);
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+button:hover {
+	background-color: #00b8cc;
+}
+
+/* Menus laterais */
+.design-selection ul,
+.zen-resources ul {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+.design-selection li,
+.zen-resources li {
+	margin-bottom: 1em;
+}
+
+.design-selection a,
+.zen-resources a {
+	color: var(--accent-color);
+	font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+	background-color: var(--footer-bg);
+	color: var(--text-color);
+	margin: 4%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 6px;
+}
+
+/* Links no rodapé como caixas */
+footer a {
+	display: inline-block;
+	border: 2px solid var(--border-color);
+	padding: 0.5em 1em;
+	margin: 0.5em;
+	color: var(--border-color);
+	background-color: transparent;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+footer a:hover {
+	background-color: var(--border-color);
+	color: var(--footer-bg);
+}
+
+/* Posicionamento - Exercícios */
+
+/* 2. Painel .explanation */
+.explanation {
+    width: 60%;
+    margin-right: 35%;
+    border-right: 1px solid #1f295c;
+    padding-right: 2%;
+}
+
+/* 3. Menu de designs */
+.design-selection {
+    position: absolute;
+    top: 560px; /* Iniciar após a seção de introdução */
+    left: 62%; /* Iniciar após o elemento .explanation (60% + 2% de padding-right) */
+    width: calc(100% - 62%); /* Ocupar o espaço restante */
+    padding-left: 2%;
+    padding-right: 2%;
+}
